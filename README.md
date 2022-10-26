@@ -1,1 +1,0 @@
-# smogalt.github.io
