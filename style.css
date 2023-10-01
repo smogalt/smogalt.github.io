@@ -10,6 +10,32 @@ body {
     color: #474646;
 }
 
+/* body sections ex. "about" section */
+section {
+    margin-bottom: 20%;
+    margin-left: 10%;
+    padding-top: 10%;
+    padding-bottom: 25%;
+}
+
+p {
+    line-height: 175%;
+    font-size: 45px;
+    
+    float: left;
+    width: 80%;
+}
+
+/* header for sections */
+.sec_head {
+    margin-left: 10%;
+
+    font-family: 'Georgia', Times, serif;
+    font-size: 150px;
+    text-align: left;
+}
+
+/* navbar */
 .nav {
     overflow: hidden;
     position: fixed;
@@ -51,18 +77,31 @@ body {
     border-spacing: 0;
 }
 
+/* title */
 .card {
     font-family: 'Georgia', Times, serif;
     font-size: 175px;
     text-align: center;
     position: relative;
     margin-top: 20%;
+    margin-bottom: 20%
 }
 
-.parallax {
-    background-image: url("cloud.jpg");
+/* fade-in animation */
+.fade {
+    opacity: 0;
+    transition: 2s all ease-in-out;
+}
 
-    min-height: 1000px;
+.fade.active{
+    opacity: 1;
+}
+
+/* parallax images */
+.parallax {
+    background-image: url("water.jpg");
+
+    min-height: 100vh;
 
     background-attachment: fixed;
     background-position: center;
@@ -71,9 +110,9 @@ body {
 }
 
 .parallax2 {
-    background-image: url("grass.jpg");
+    background-image: url("tree.jpg");
 
-    min-height: 1500px;
+    min-height: 100vh;
 
     background-attachment: fixed;
     background-position: center;
@@ -81,26 +120,3 @@ body {
     background-size: cover;
 }
 
-.sec_head {
-    padding-top: 10%;
-    margin-bottom: 5%;
-    margin-left: 10%;
-
-    font-family: 'Georgia', Times, serif;
-    font-size: 150px;
-    text-align: left;
-}
-
-p {
-    margin-top: 0;
-    padding-left: 5%;
-    padding-right: 20%;
-    padding-bottom: 20%;
-
-    line-height: 175%;
-    font-size: 45px;
-    
-    float: left;
-    width: 80%;
-    background-color: #efefef;
-}
