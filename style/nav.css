@@ -1,0 +1,47 @@
+/* navbar */
+nav {
+    display: flex;
+    overflow: hidden;
+    position: fixed;
+
+    top: 0;
+    z-index: 1;
+    width: 60%;
+    margin-top: .5em;
+    margin-left: 20%;
+    margin-right: 20%;
+
+    justify-content: space-between;
+    background-color: #dbdbdd;
+    border-radius: 17px;
+
+    opacity: 0;
+    -webkit-animation: slide 1s forwards;
+    animation: slide 1s forwards;
+
+    box-shadow: 2px 4px 8px 2px #66666686;
+}
+
+nav a {
+    text-align: center;
+
+    padding-top: .5em;
+    padding-bottom: .5em;
+    padding-left: 1em;
+    padding-right: 1em;
+
+    text-decoration: none;
+    font-size: 30px;
+
+    color: #666666;
+    transition: all .1s ease-in-out;
+    flex: 1 0 0;
+}
+
+nav :hover {
+    opacity: 1;
+    background-color: #666666;
+    color: #efefef;
+    font-style: italic;
+    text-decoration: underline 1px;
+}

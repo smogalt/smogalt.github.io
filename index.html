@@ -1,73 +1,253 @@
 <!DOCTYPE html>
 
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <title> Smogalt </title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="stylesheet" type="text/css" href="style/nav.css">
+    <link rel="stylesheet" type="text/css" href="style/content.css">
+    <script src="js/index.js"></script>
+
+    <link rel="icon" type="image/x-icon" href="img/caveman.png">
+    <title> smogalt </title>
 </head>
 
 <body>
-    <script>
-        function reveal() {
-            var reveals = document.querySelectorAll(".fade");
-
-            for (var i = 0; i < reveals.length; i++) {
-                var windowHeight = window.innerHeight;
-                var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 150;
-
-                if (elementTop < windowHeight - elementVisible) {
-                reveals[i].classList.add("active");
-                } else {
-                reveals[i].classList.remove("active");
-                }
-            }
-        }
-        window.addEventListener("scroll", reveal);
-
-    </script>
-
-    <div class="nav">
-        <a href="#">Home</a>
+    <nav>
+        <a href="#top">Home</a>
         <a href="#about">About</a>
+        <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
-    </div>
+    </nav>
 
     <div class="card">
-        I like to code.
+        efficiency
     </div>
 
-    <div style="font-size: 70px; text-align: center; margin-top: 20%; margin-bottom: 20%;">
-        ▼
-    </div>
+    <div class="dark" id="about">
+        <div class="bubbles">
+            <div class="fade left content box">
+                <div class="center">
+                    <p>
+                        Hi! I'm a dev based out of D.C. and I specialize in web-design.
+                    </p>
+                </div>
+            </div>
 
-    <div class="parallax">
-    </div>
+            <div class="content empty"></div>
+            <div class="content empty"></div>
 
-    <section class="fade" id="about">
-        <div class="sec_head">
-            About
+            <div class="fade right content box">
+                <div class="center">
+                    <p>
+                        I'm new to UI/UX but my roots are in <strong>C/C++</strong> and <strong>DSA</strong>
+                    </p>
+                </div>
+            </div>
+
+            <div class="fade left content box">
+                <div class="center">
+                    <p>
+                        I'm a <strong>generalist</strong> with experience in security, networking, and
+                        <a href="https://vexrobotics.com" target="_blank">robotics</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="content empty"></div>
+            <div class="content empty"></div>
+
+            <div class="fade right content box">
+                <div class="center">
+                    <p>
+                        I believe <strong>minimal</strong> and <strong>concise</strong> designs lead to
+                        <strong>better</strong> products.
+                    </p>
+                </div>
+            </div>
         </div>
-
-        <p>
-            Hello! I'm a Dev from the United States. Mostly I work with C,
-            but I enjoy doing web design on the side. Right now I'm trying 
-            to round out my skillset.
-        </p>
-    </section>
-
-    <div class="parallax2">
     </div>
 
-    <section class="fade" id="contact">
-        <div class="sec_head">
-            Contact
+    <div class="fade left project" id="projects">
+        <div class="item">
+            <a href="https://github.com/smogalt/neuc" target="_blank">
+                <img src="img/neuc.jpg" alt="terminal with neuc running">
+            </a>
         </div>
-        
-        <p>
-            <strong>Email: <a href="mailto:smogalt@proton.me"> smogalt@proton.me </a></strong>
-            <br>
-            I'm happy to do web design for you, just email me. I can work under 30 hours a week.
-        </p> 
-    </section>
+        <div class="item">
+            <div class="sec_head"> Neuc </div>
+            <p>
+                Minimal peer-to-peer chat application with AES-512 and RSA-2048.
+                Moving towards RSA-4096.
+            </p>
+        </div>
+    </div>
+
+    <div class="collapsible">
+        Details...
+    </div>
+
+    <div class="collapsed dark">
+        <div class="project">
+            <div class="fade left item">
+                <div class="sec_head">
+                    Challenge
+                </div>
+                <p>
+                    Create a chat program with encryption and using hole punching.
+                </p>
+            </div>
+            <div class="fade right item">
+                <div class="sec_head" style="text-decoration: none;">
+                    Outline
+                </div>
+                <table>
+                    <thead>
+                        <th>Step</th>
+                        <th>Details</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Send keys to rendezvous server</td>
+                            <td>Hashing keys to prevent overlap</td>
+                        </tr>
+                        <tr>
+                            <td>Exchange client information</td>
+                            <td>(WIP) encrypt client address/port</td>
+                        </tr>
+                        <tr>
+                            <td>Exchange RSA and AES keys</td>
+                            <td>Encrypt the AES key with RSA and send it back</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="fade right project">
+        <div class="item">
+            <div class="sec_head"> BuzzKill </div>
+            <p>
+                Script to simplify <a href="https://www.uscyberpatriot.org" target="_blank">CyberPatriot</a>
+                competions.
+            </p>
+        </div>
+        <div class="item">
+            <a href="https://github.com/smogalt/buzzkill" target="_blank">
+                <img src="img/buzzkill.png" alt="terminal with text">
+            </a>
+        </div>
+    </div>
+
+    <div class="collapsible">
+        Details...
+    </div>
+
+    <div class="collapsed dark">
+        <div class="project">
+            <div class="fade left item">
+                <div class="sec_head" style="text-decoration: none;">
+                    Functions
+                </div>
+                <table>
+                    <thead>
+                        <th>Functions</th>
+                        <th>Details</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Compare list of users and admins in README to ones on system</td>
+                            <td>cURL README then parse it with sed and grep</td>
+                        </tr>
+                        <tr>
+                            <td>Search for games in installed packages</td>
+                            <td>Make list of installed packages then search descpritions for keywords</td>
+                        </tr>
+                        <tr>
+                            <td>Config commands</td>
+                            <td>Enable auto-updates, no ssh root login, etc. Makes it harder to forget easy problems
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="fade right item">
+                <div class="sec_head">
+                    Challenge
+                </div>
+                <p>
+                    Create a bash script to automate CyberPatriot competitions.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="dark">
+        <div class="bubbles">
+            <div class="fade left content box">
+                <p>
+                    I can do light HTML/CSS for you.
+                </p>
+            </div>
+
+            <div class="content empty"></div>
+            <div class="content empty"></div>
+
+            <div class="fade right content box">
+                <p>
+                    Flat rate (min. $10)
+                </p>
+            </div>
+
+            <div class="fade left content box">
+                <p>
+                    Shortest deadline is 8 days.
+                </p>
+            </div>
+
+            <div class="content empty"></div>
+        </div>
+    </div>
+
+    <div class="fade left content" id="contact" style="border-style: none;">
+        <div class="center">
+            <div class="sec_head">
+                Contact
+            </div>
+            <p>
+                Just DM me with any offers or if you just want to chat.
+                <a href="https://github.com/smogalt">GitHub</a>,
+                <a href="https://discord.com/users/1042599587669618708" target="_blank">Discord</a>
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        Copyright 2023 smogalt.
+
+        Contact:
+        <a href="https://github.com/smogalt" target="_blank">GitHub</a>,
+        <a href="https://discord.com/users/1042599587669618708" target="_blank">Discord</a>
+    </footer>
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
 </body>
+
+</html>

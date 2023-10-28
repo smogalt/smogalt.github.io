@@ -1,0 +1,140 @@
+/* title page */
+.card {
+    font-size: 175px;
+    text-align: center;
+    position: relative;
+
+    margin-top: 2em;
+    margin-bottom: 3em;
+    margin-left: 1em;
+    margin-right: 1em;
+    padding: .1em;
+
+    background-color: #666666;
+    border-color: #666666;
+
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 40px;
+
+
+    opacity: 0;
+    -webkit-animation: slide 1s forwards;
+    animation: slide 1s forwards;
+}
+
+/* header for sections */
+.sec_head {
+    font-size: 150px;
+    text-align: center;
+    font-weight: 100;
+    font-style: oblique;
+    text-decoration: underline 3px;
+}
+
+/* container for "bubbles" */
+.bubbles {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* body sections ex. "about" section */
+.content {
+    margin: 50px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 40px;
+}
+
+.content.box {
+    width: 500px;
+    min-height: 300px;
+}
+
+.content.empty {
+    border-style: none;
+    width: 300px;
+}
+
+.collapsible {
+    cursor: pointer;
+    font-size: 30px;
+
+    padding: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2em;
+
+    width: 4em;
+
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 40px;
+
+    transition: all .3s ease-in-out;
+}
+
+.collapsible.active {
+    background-color: #666666;
+    color: #efefef;
+    border-color: #666666;
+}
+
+.collapsed {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .3s ease-in-out;
+}
+
+/* container for project cards */
+.project {
+    display: flex;
+    flex-direction: row;
+    margin-top: 7em;
+    margin-bottom: 7em;
+    align-content: center;
+}
+
+.project .item {
+    margin: 2em;
+    font-size: 30px;
+    align-content: center;
+}
+
+.project .item .sec_head {
+    font-size: 75px;
+    text-decoration: underline 1px;
+}
+
+.project .item p {
+    font-size: 30px;
+
+    padding: 2em;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 40px;
+}
+
+.project .item img {
+    width: 500px;
+    height: 500px;
+    border-radius: 40px;
+
+    opacity: .8;
+    transition: all .25s linear;
+
+    box-shadow: 0 8px 16px 0 rgba(70, 70, 70, 0.7);
+}
+
+.project .item img:hover {
+    opacity: .5;
+}

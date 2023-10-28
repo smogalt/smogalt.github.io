@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+    background-color: #efefef;
+    color: #666666;
+}
+
+.dark {
+    background-color: #666666;
+    color: #efefef;
+}
+
+p {
+    line-height: 175%;
+    font-size: 45px;
+}
+
+a {
+    text-decoration: underline 1px;
+    color: inherit;
+}
+
+a:hover {
+    opacity: .5;
+}
+
+footer {
+    margin: .5em;
+}
+
+@-webkit-keyframes slide {
+    100% {
+        opacity: 1;
+        color: #666666;
+        background-color: #efefef;
+        border-color: #666666;
+    }
+}
+
+@keyframes slide {
+    100% {
+        opacity: 1;
+        color: #666666;
+        background-color: #efefef;
+        border-color: #666666;
+    }
+}
+
+/* fade-in animation */
+.fade.left {
+    position: relative;
+    opacity: 0;
+    transition: all 1s cubic-bezier(.65, .05, .36, 1);
+    left: -50px;
+}
+
+.fade.left.active {
+    left: 0px;
+    opacity: 1;
+}
+
+.fade.right {
+    position: relative;
+    opacity: 0;
+    transition: all 1s cubic-bezier(.65, .05, .36, 1);
+    right: -50px;
+}
+
+.fade.right.active {
+    right: 0px;
+    opacity: 1;
+}
+
+table {
+    overflow:hidden;
+}
+
+td {
+    border-color: #efefef;
+    border-width: 1px;
+    border-style: solid;
+    margin:0;
+    font-size: 30px;
+    padding: .5em;
+}
+
+th {
+    border-color: #efefef;
+    border-width: 1px;
+    border-style: solid;  
+    margin:0;
+    font-size: 50px;
+    font-weight: 300;
+    font-style: oblique;
+    padding: .5em;
+}
+
+th:first-of-type {
+    border-top-left-radius: 40px;
+}
+
+th:last-of-type {
+    border-top-right-radius: 40px;
+}
+
+tr:last-of-type td:first-of-type {
+    border-bottom-left-radius: 40px;
+}
+
+tr:last-of-type td:last-of-type {
+    border-bottom-right-radius: 40px;
+}
